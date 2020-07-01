@@ -32,4 +32,17 @@ public class DemoApplication {
 
 		return emp;
 	}
+	
+	@RequestMapping(value = "/Travelling", method = RequestMethod.GET)
+	public Travelling SecondPage() {
+
+		Travelling Tra = new Travelling();
+		Tra.setName("karthik");
+		Tra.setTicket("0000ASPRT");
+		Tra.setBusName("MyBus");
+		Tra.setAmount(120);
+
+		return Tra;
+	}
+	
 }
