@@ -3,6 +3,8 @@ package com.example.demo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,4 +21,15 @@ public class DemoApplication {
 	return String.format("Hello %s!", name);
 	}
 	
+	@RequestMapping(value = "/employee", method = RequestMethod.GET)
+	public Employee firstPage() {
+
+		Employee emp = new Employee();
+		emp.setName("karthik");
+		emp.setDesignation("softwareEngineer");
+		emp.setEmpId("1");
+		emp.setSalary(120000);
+
+		return emp;
+	}
 }
