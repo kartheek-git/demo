@@ -1,5 +1,9 @@
 package com.example.demo;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
+
 public class Travelling {
 	
 	private String Ticket;

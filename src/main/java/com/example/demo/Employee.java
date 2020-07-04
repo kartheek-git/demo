@@ -1,6 +1,11 @@
 package com.example.demo;
 
+import javax.xml.bind.annotation.XmlRootElement;
+@XmlRootElement
+
 public class Employee {
+	
+	
 	
 	private String empId;
 	private String name;
